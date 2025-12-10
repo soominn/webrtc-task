@@ -17,6 +17,7 @@
 ---
 
 ## 📌 프로젝트 개요
+<img src='https://github-production-user-asset-6210df.s3.amazonaws.com/82988454/524598912-6d03dba8-c3af-425b-9f42-9548bfadba9d.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251210T015703Z&X-Amz-Expires=300&X-Amz-Signature=22db8a38f1c53c6d26f48f61a01725478f1e5440251a8a26b9febb557551d80d&X-Amz-SignedHeaders=host'>
 
 ### 프로젝트 선정 이유
 기존의 화상 채팅 서비스를 넘어, **동영상 콘텐츠를 함께 시청하며 소통하는 경험**을 제공하고자 했습니다. 
@@ -953,14 +954,14 @@ export const VideoPlayer = ({ videoId, sendSyncMessage, onSyncMessage }) => {
 
 ---
 
-# 📚 참고 자료
+## 📚 참고 자료
 
-## 공식 문서
+### 공식 문서
 - [WebRTC API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
 - [Socket.io Documentation](https://socket.io/docs/)
 - [React YouTube Player](https://www.npmjs.com/package/react-youtube)
 
-## 학습 자료
+### 학습 자료
 - [WebRTC for the Curious](https://webrtcforthecurious.com/)
 - [WebRTC Samples](https://webrtc.github.io/samples/)
 - [Google Developers - WebRTC](https://developers.google.com/web/updates/2015/07/mediastream-deprecations)
