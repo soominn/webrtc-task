@@ -15,6 +15,7 @@ const io = new Server(httpServer, {
 })
 
 const rooms = new Map()
+const MAX_ROOM_SIZE = 6
 
 io.on('connection', (socket) => {
   console.log('Client connected:', socket.id)
@@ -22,15 +23,25 @@ io.on('connection', (socket) => {
   socket.on('join-room', ({ roomId, username }) => {
     console.log(`${username} joining room: ${roomId}`)
 
-    socket.join(roomId)
-    socket.username = username
-    socket.roomId = roomId
-
     if (!rooms.has(roomId)) {
       rooms.set(roomId, new Map())
     }
 
     const room = rooms.get(roomId)
+
+    // 방 인원 제한 확인
+    if (room.size >= MAX_ROOM_SIZE) {
+      socket.emit('room-full', {
+        message: `방이 가득 찼습니다. (최대 ${MAX_ROOM_SIZE}명)`
+      })
+      console.log(`Room ${roomId} is full. ${username} cannot join.`)
+      return
+    }
+
+    socket.join(roomId)
+    socket.username = username
+    socket.roomId = roomId
+
     room.set(socket.id, { username, socketId: socket.id })
 
     // 기존 참여자들에게 새 사용자 알림

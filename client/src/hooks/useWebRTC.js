@@ -121,6 +121,12 @@ function useWebRTC(roomId, username, onMessage) {
       })
     })
 
+    // 방이 가득 찼을 때
+    socketRef.current.on('room-full', ({ message }) => {
+      alert(message)
+      window.location.reload()
+    })
+
     return () => {
       // Cleanup
       if (localStreamRef.current) {
