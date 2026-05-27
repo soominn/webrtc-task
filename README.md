@@ -44,7 +44,7 @@
 
 ### 1. WebRTC란?
 
-**WebRTC(Web Real-Time Communication)**는 웹 브라우저 간 플러그인 없이 
+**WebRTC(Web Real-Time Communication)** 는 웹 브라우저 간 플러그인 없이 
 **음성, 영상, 데이터를 실시간으로 주고받을 수 있게 하는 오픈소스 기술**입니다.
 
 #### 특징
